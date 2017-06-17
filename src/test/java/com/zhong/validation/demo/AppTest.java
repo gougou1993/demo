@@ -37,7 +37,7 @@ public class AppTest {
 	    System.out.println("listProp1: " + objectMapper.writeValueAsString(myProps.getListProp1())); 
 	    System.out.println("listProp2: " + objectMapper.writeValueAsString(myProps.getListProp2())); 
 	    System.out.println("mapProps: " + objectMapper.writeValueAsString(myProps.getMapProps())); 
-	    
+	    innerMethod(objectMapper.toString());
 	    //自定义配置文件属性获取
 	    System.out.println(myWebConfig.getAuthor());
 	    
@@ -45,5 +45,11 @@ public class AppTest {
 	    System.out.println("使用@Value方式(常用)"+msg);
 	
 	}
+	
+	private void innerMethod(String n){
+		System.out.println(n);
+	}
+	
+	
 	 	
 }
